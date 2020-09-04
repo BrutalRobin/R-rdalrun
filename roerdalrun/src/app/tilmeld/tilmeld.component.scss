@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+.heroimg{
+  width: 100%;
+  height: 70vh;
+  background-image: url(../../assets/løb5.jpg);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 69%);
+  background-size: cover;
+  h1{
+    margin: 0;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    width: 80%;
+    padding-top: 3vh;
+    margin: auto;
+    font-size: calc(90px + 60 * ((100vw - 320px) / 680));
+    text-align: center;
+  }
+}
+h2{
+  width: 100%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #29235C;
+  font-size: 45px;
+  margin: 0;
+  margin-bottom: 2vh;
+}
+.header2{
+  margin-top: 5vh;
+}
+.teaser{
+  color: #29235C;
+  width: 80%;
+  margin: auto;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin-bottom: 5vh;
+}
+.spons{
+  width: 80%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: white;
+  background-color: #29235C;
+  margin: auto;
+  padding: 5vh 20px;
+  h3{
+    width: 100%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #29235C;
+    font-size: 45px;
+    margin: 0;
+    margin-bottom: 2vh;
+
+  }
+}
+  .form{
+    position: relative;
+    z-index: 1;
+    margin-left: 10%;
+    margin-top: 5vh;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(255, 255, 255);
+    width: 50%;
+    h4{
+      font-family: 'Open Sans', sans-serif;
+      padding-left: 10%;
+      color: rgb(73, 73, 73);
+      margin: 0;
+      margin-bottom: 2vh;
+    }
+    .header2{
+      width: 80%;
+      text-align: left;
+      font-family: 'Open Sans', sans-serif;
+      margin: auto;
+      color: rgb(99, 99, 99);
+      font-weight: 600;
+      font-size: 30px;
+    }
+    label{
+      display: inline-block;
+      margin-bottom: 5px;
+      color: #29235C;
+    }
+    .red{
+      color: red;
+    }
+    input, select {
+      font-family: 'Open Sans', sans-serif;
+      outline: 0;
+      background: white;
+      color: #29235C;
+      width: 100%;
+      border: 1px solid #29235C;
+      margin: 0 0 25px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+      border-radius: 5px;
+    }
+    button {
+      font-family: 'Open Sans', sans-serif;
+      text-transform: uppercase;
+      outline: 0;
+      background: red;
+      width: 25%;
+      border: 0;
+      padding: 15px;
+      color: #FFFFFF;
+      font-size: 14px;
+      transition: 0.3s;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: rgba(255, 0, 0, 0.562);
+      transition: 0.3s;
+      transform: scale(1.05);
+    }
+    button:active{
+      transform: scale(0.9);
+    }
+    .button2{
+      margin-left: 20px;
+    }
+  }
+@media only screen and (max-width: 600px) {
+  .pagegrid {
+    grid-template-columns: 1fr;
+  }
+}

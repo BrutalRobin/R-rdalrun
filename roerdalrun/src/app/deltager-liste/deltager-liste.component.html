@@ -1,0 +1,48 @@
+<div class="heroimg">
+  <h1>RØRDAL <br> RUN</h1>
+</div>
+<h2>{{content.item.title}}</h2>
+<div class="spons">{{content.item.teaser}} <br> <br> Klik på løbere for at se flere detaljer</div>
+<select id="sort-by" (change)="sort($event)">
+  <option value="" selected disabled hidden>Sorter Deltagere</option>
+  <option value="Firstname">Fornavn A-Å</option>
+  <option value="Lastname">Efternavn A-Å</option>
+  <option value="Low2">Postnummer lav til høj</option>
+  <option value="High2">Postnummer høj til lav</option>
+  <option value="Low">Startnummer lav til høj</option>
+  <option value="High">Startnummer høj til lav</option>
+</select>
+<input type="text" placeholder="Søg i deltagere. Afslut med enter" (change)="search($event)">
+<div class="headers">
+<div>Køn</div>
+<div>Startnummer</div>
+<div>Valgt rute</div>
+<div>Fornavn</div>
+<div>Efternavn</div>
+<div>Postnummer</div>
+<div>Fødselsdato</div>
+</div>
+<div id="deltager" *ngFor="let deltager of deltagerarray;" (click)="seeUserdetails(deltager.id)" (click)="status=!status">
+<div [ngStyle]="{
+  'background-color': setGenderColor(deltager.gender)}" [innerHTML]='setUserGender(deltager.gender)' class="gender"></div>
+<div class="id">{{deltager.id}}</div>
+<div [innerHTML]='setUserRun(deltager.run_id)' class="runid"></div>
+<div class="firstname">{{deltager.firstname}}</div>
+<div class="lastname">{{deltager.lastname}}</div>
+<div class="zip">{{deltager.zipcode}}</div>
+<div [innerHTML]='formatTime(deltager.birthdate)' class="birthday"></div>
+</div>
+<div id="modal" [ngClass]="status ? 'open' : 'closed'" (click)="status=!status">
+  <div class="info">
+  <div> <strong> Startnummer:</strong> {{runner.item.id}}</div>
+  <div [innerHTML]='"<strong>" + "Valgt Løb: " + "</strong>"  + setUserRun(runner.item.run_id)'></div>
+  <div> <strong> Fornavn:</strong> {{runner.item.firstname}}</div>
+<div> <strong> Efternavn:</strong>{{runner.item.lastname}}</div>
+<div> <strong> Postnummer:</strong>{{runner.item.zipcode}}</div>
+<div [innerHTML]='"<strong>" + "Fødselsdag: " + "</strong>"  + formatTime(runner.item.birthdate)'></div>
+<div [innerHTML]='"<strong>" + "Tilmeldt den: " + "</strong>" + formatTime(runner.item.created)'></div>
+<Div> <strong> Kommentar</strong></Div>
+<div>{{runner.item.comment}}</div>
+<div>{{age}}</div>
+</div>
+</div>

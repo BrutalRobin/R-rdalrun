@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+.heroimg{
+  width: 100%;
+  height: 70vh;
+  background-image: url(../../assets/løb.jpeg);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 69%);
+  h1{
+    margin: 0;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    width: 80%;
+    padding-top: 3vh;
+    margin: auto;
+    font-size: calc(90px + 60 * ((100vw - 320px) / 680));
+    text-align: center;
+  }
+}
+h2{
+  width: 100%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #29235C;
+  font-size: 45px;
+  margin: 0;
+  margin-bottom: 2vh;
+}
+.header2{
+  margin-top: 5vh;
+}
+.inline{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  margin: 5vh auto 0 auto;
+  padding: 0 20%;
+  .name{
+    text-align: center;
+    margin: 0 10px 0 10px;
+    background-color: #29235C;
+    height: 70px;
+    padding-top: 30px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+    transition: .5s ease-in-out;
+    p{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 30px;
+    margin: 0;
+  }
+  }
+  .name:nth-child(1){
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
+  }
+  .name:nth-child(2){
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 0 89%);
+  }
+  .name:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
+  }
+}
+.teaser{
+  color: #29235C;
+  width: 80%;
+  margin: auto;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+.spons{
+  width: 80%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #29235C;
+  margin: auto;
+  h3{
+    width: 100%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #29235C;
+    font-size: 45px;
+    margin: 0;
+    margin-bottom: 2vh;
+
+  }
+}

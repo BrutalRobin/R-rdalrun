@@ -1,0 +1,40 @@
+<div class="heroimg">
+  <h1>RØRDAL <br> RUN</h1>
+</div>
+<h2>{{content.item.title}}</h2>
+<p class="teaser">{{content.item.teaser}}</p>
+<div [innerHTML]="content.item.content" class="spons"></div>
+<div #form class="form">
+<form [formGroup]="koebForm" (ngSubmit)="onSubmit()" class="login-form">
+<label class="container">Vælg løb</label>
+  <select formControlName="løb">
+    <option value="3">One Mile</option>
+    <option value="2">5 Km</option>
+    <option value="1">10 Km</option>
+</select>
+<label class="username-label" for="username">Fornavn<span class="red">*</span></label>
+    <input (focus)="focus()" type="text" name="username" id="username" formControlName="username" placeholder="Indtast dit fornavn" />
+    <label class="password-label" for="password">Efternavn<span class="red">*</span></label>
+    <input (focus)="focus()" type="text" name="password" id="password" formControlName="lastName" placeholder="Indtast din efternavn" />
+    <label class="adress-label" for="adress">Adresse<span class="red">*</span></label>
+    <input (focus)="focus()" type="text" name="adress" id="adress" formControlName="adress" placeholder="Indtast din adresse" />
+    <label class="zip-label" for="zip">Postnummer<span class="red">*</span></label>
+    <input (focus)="focus()" type="number" name="zip" id="zip" formControlName="zip" placeholder="Indtast dit Postnummer" />
+    <label class="city-label" for="city">By<span class="red">*</span></label>
+    <input (focus)="focus()" type="text" name="city" id="city" formControlName="city" placeholder="Indtast din by" />
+    <label class="password-label" for="password">Email:<span class="red">*</span></label>
+    <input (focus)="focus()" type="text" name="password" id="email" formControlName="email" placeholder="Indtast din email" />
+    <label class="password-label" for="password">Telefon<span class="red">*</span></label>
+    <input (focus)="focus()" type="text" name="password" id="phone" formControlName="phone" placeholder="telefon" />
+    <label class="password-label" for="password">Telefon<span class="red">*</span></label>
+    <input type="date" id="checkin" formControlName="checkin">
+    <label for="noflex">Mand
+      <input type="radio" name="flex" checked="checked" id="noflex" value="m" formControlName="flex"></label>
+      <label for="noflex">kvinde
+      <input type="radio" name="flex"  id="flex" value="f" formControlName="flex"></label> <br>
+      <label class="password-label" for="password">Besked<span class="red">*</span></label>
+      <input (focus)="focus()" type="text" name="password" id="password" formControlName="comment" placeholder="besked" />
+    <button type="login">Tilmeld</button>
+    <p class="error"></p>
+  </form>
+</div>
